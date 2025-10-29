@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import rosettaLogo from "../assets/LogoRosettaWithNameV2.svg";
+import rosettaLogo from "../assets/LogoRosettaWithNameV2Fit.svg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -21,11 +21,12 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 py-20">
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
           {/* Logo */}
-          <div className="mb-4">
+          <div className="mb-4 flex justify-center">
             <img
               src={rosettaLogo}
               alt="Rosetta Logo"
-              className="h-48 md:h-32 w-auto"
+              // className="h-48 md:h-32 w-auto"
+              className="h-auto w-1/2"
             />
           </div>
 
@@ -65,17 +66,34 @@ const Hero = () => {
           </div>
 
           {/* Tech badges */}
-          <div className="flex flex-wrap justify-center gap-3 pt-8">
-            {["Django", "React", "AES-GCM", "Web3", "Blockchain"].map(
-              (tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 text-sm font-medium text-foreground hover:border-primary/50 transition-colors"
-                >
-                  {tech}
-                </span>
-              )
-            )}
+          <div className="flex flex-wrap justify-center gap-3 pt-8 max-w-4xl">
+            {[
+              "Django",
+              "React",
+              "AES-GCM",
+              "Web3",
+              "Blockchain",
+              "Shadcn",
+              "HeadlessUI",
+              "Tailwind",
+              "PostgreSQL",
+              "JWT",
+              "Typescript",
+              "Python",
+              "Gunicorn",
+              "Nginx",
+              "Docker",
+              "Git",
+              "Selenium",
+              "Playwright",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-primary/20 text-sm font-medium text-foreground hover:border-primary/50 transition-colors"
+              >
+                {tech}
+              </span>
+            ))}
           </div>
         </div>
       </div>
