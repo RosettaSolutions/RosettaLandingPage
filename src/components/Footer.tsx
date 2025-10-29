@@ -22,21 +22,21 @@ const Footer = () => {
 
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
             <a
-              href="https://www.linkedin.com/company/rosetta-technological-solutions"
+              href={linkedinUrl}
               target="_blank"
               className="hover:text-primary transition-colors"
             >
               LinkedIn
             </a>
             <a
-              href="https://github.com/RosettaSolutions"
+              href={githubUrl}
               target="_blank"
               className="hover:text-primary transition-colors"
             >
               GitHub
             </a>
             <a
-              href="mailto:kvsgpro@outlook.com"
+              href={`mailto:${emailContact}`}
               target="_blank"
               className="hover:text-primary transition-colors"
             >
