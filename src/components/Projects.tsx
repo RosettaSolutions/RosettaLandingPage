@@ -20,6 +20,7 @@ const projects = [
       "Typescript",
     ],
     category: "Verificação e Segurança",
+    link: "https://safe-number.com/amadeus-santos-advogados/",
   },
   {
     title: "SafeNumber Administration",
@@ -28,6 +29,7 @@ const projects = [
     image: SafeNumberAdmin,
     tags: ["Django", "Git", "Postman", "JWT", "Gunicorn", "APIs Externas"],
     category: "Painel Administrativo",
+    link: "https://api.safe-number.com/admin/",
   },
   {
     title: "CryptoVault",
@@ -44,18 +46,19 @@ const projects = [
       "AES-GCM",
     ],
     category: "Blockchain",
+    link: "https://cryptovault.rosetta-solutions.com",
   },
 ];
 
 const Projects = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-card to-background relative overflow-hidden">
+    <section id="projects" className="py-24 bg-linear-to-b from-card to-background relative overflow-hidden" aria-label="Projetos realizados pela Rosetta Solutions">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-size-[4rem_4rem] opacity-20" />
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-linear-to-r from-primary to-accent">
             Projetos Realizados
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -74,10 +77,12 @@ const Projects = () => {
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`Screenshot do projeto ${project.title} — ${project.category}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                  decoding="async"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-linear-to-t from-card via-card/50 to-transparent opacity-60" />
 
                 {/* Category Badge */}
                 <Badge className="absolute top-4 right-4 bg-primary/90 text-primary-foreground">
@@ -91,7 +96,13 @@ const Projects = () => {
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+                  <a
+                    href={project.link || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+                  </a>
                 </div>
 
                 {/* Description */}
