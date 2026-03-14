@@ -30,7 +30,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section id="services" className="py-24 bg-background relative overflow-hidden" aria-label="Nossas especialidades e serviços">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-card/50 to-transparent" />
       

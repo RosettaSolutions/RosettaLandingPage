@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center space-y-6">
           <img
             src={rosettaLogo}
-            alt="Rosetta Logo"
+            alt="Logotipo da Rosetta Solutions"
             className="h-16 w-auto opacity-80"
           />
 
@@ -20,10 +20,12 @@ const Footer = () => {
             futuro digital com segurança e inovação.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+          <address className="not-italic flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
             <a
               href={linkedinUrl}
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar perfil da Rosetta no LinkedIn"
               className="hover:text-primary transition-colors"
             >
               LinkedIn
@@ -31,18 +33,21 @@ const Footer = () => {
             <a
               href={githubUrl}
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visitar perfil da Rosetta no GitHub"
               className="hover:text-primary transition-colors"
             >
               GitHub
             </a>
             <a
               href={`mailto:${emailContact}`}
-              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Enviar email para a Rosetta Solutions"
               className="hover:text-primary transition-colors"
             >
               Email
             </a>
-          </div>
+          </address>
 
           <div className="pt-6 border-t border-border w-full text-center text-sm text-muted-foreground">
             <p>

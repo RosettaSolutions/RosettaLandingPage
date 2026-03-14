@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-card">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-card" aria-label="Rosetta Solutions — Página inicial">
       {/* Animated background gradient */}
       <div
         className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent opacity-50 animate-gradient-shift"
@@ -24,9 +24,10 @@ const Hero = () => {
           <div className="mb-4 flex justify-center">
             <img
               src={rosettaLogo}
-              alt="Rosetta Logo"
-              // className="h-48 md:h-32 w-auto"
+              alt="Logotipo da Rosetta Solutions"
               className="h-auto w-1/2"
+              fetchPriority="high"
+              loading="eager"
             />
           </div>
 

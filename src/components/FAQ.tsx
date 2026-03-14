@@ -40,7 +40,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-card">
+    <section id="faq" className="py-24 px-4 bg-card" aria-label="Perguntas frequentes sobre nossos serviços">
       <div className="container mx-auto max-w-3xl">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent leading-normal">
